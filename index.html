@@ -7,7 +7,7 @@
     <meta name="description" content="Emojily - Track your daily mood with emojis. Coming soon to the App Store.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -23,7 +23,8 @@
             justify-content: center;
             background: #0a0a0f;
             color: #fff;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
         }
 
@@ -212,11 +213,45 @@
             margin-bottom: 2rem;
         }
 
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.9rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-link {
+            color: rgba(255, 255, 255, 0.58);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            transition: color 0.2s, border-color 0.2s, transform 0.2s;
+        }
+
+        .legal-link:hover {
+            color: rgba(255, 255, 255, 0.88);
+            border-color: rgba(196, 181, 253, 0.28);
+            transform: translateY(-1px);
+        }
+
+        .footer-copy {
+            margin-top: 0.95rem;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.34);
+        }
+
         @media (max-width: 480px) {
             h1 { font-size: 2.2rem; }
             .tagline { font-size: 1rem; }
             .notify-form { flex-direction: column; }
             .features { gap: 1.5rem; }
+            .legal-links { margin-top: 2rem; }
         }
     </style>
 </head>
@@ -252,9 +287,16 @@
             </div>
             <div class="feature">
                 <span class="feature-icon">🔒</span>
-                <span class="feature-text">Private & secure</span>
+                <span class="feature-text">Private &amp; secure</span>
             </div>
         </div>
+
+        <div class="legal-links">
+            <a class="legal-link" href="./privacy-policy.html">Privacy Policy</a>
+            <a class="legal-link" href="./terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a class="legal-link" href="mailto:support@Emojily.app">Contact</a>
+        </div>
+        <p class="footer-copy">Built for simple, private mood check-ins.</p>
     </div>
 
     <script>
