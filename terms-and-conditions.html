@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojily Terms &amp; Conditions</title>
+    <meta name="description" content="Read the Emojily Terms and Conditions, including permitted use, third-party services, updates, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: dark;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(ellipse 70% 55% at 20% 20%, rgba(131, 58, 180, 0.16) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 45% at 78% 22%, rgba(253, 121, 168, 0.12) 0%, transparent 70%),
+                radial-gradient(ellipse 45% 40% at 50% 90%, rgba(252, 176, 69, 0.12) 0%, transparent 70%),
+                linear-gradient(180deg, #09090f 0%, #05050a 100%);
+            color: #f6f3ff;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 120px 120px;
+            mask-image: radial-gradient(circle at center, black 20%, transparent 85%);
+            pointer-events: none;
+            opacity: 0.28;
+        }
+
+        .floating-emojis {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.07;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+            }
+        }
+
+        .page-shell {
+            position: relative;
+            z-index: 1;
+            width: min(100%, 1120px);
+            margin: 0 auto;
+            padding: 32px 20px 72px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .topbar-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-size: 1.55rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.38), rgba(236, 72, 153, 0.32));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 45px rgba(12, 12, 25, 0.25);
+        }
+
+        .brand-copy strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-copy span {
+            display: block;
+            margin-top: 0.12rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.56);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            transition: color 0.2s, border-color 0.2s, transform 0.2s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.16);
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            margin-bottom: 24px;
+        }
+
+        .hero-card,
+        .policy-card {
+            border-radius: 30px;
+            background: rgba(9, 9, 16, 0.66);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 30px 80px rgba(4, 4, 10, 0.45);
+            backdrop-filter: blur(20px);
+        }
+
+        .hero-card {
+            padding: 32px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.5rem 0.95rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .eyebrow-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: #34d399;
+            box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.12);
+        }
+
+        h1 {
+            font-size: clamp(2.7rem, 5vw, 4.4rem);
+            line-height: 0.96;
+            letter-spacing: -0.05em;
+            font-weight: 800;
+            max-width: 12ch;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #ddd6fe 45%, #f9a8d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-copy {
+            max-width: 58ch;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .hero-highlights {
+            display: flex;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+            margin-top: 1.6rem;
+        }
+
+        .highlight-chip {
+            padding: 0.72rem 0.95rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            min-width: 150px;
+        }
+
+        .highlight-chip span {
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.42);
+            margin-bottom: 0.35rem;
+        }
+
+        .highlight-chip strong {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .policy-card {
+            padding: 36px 32px;
+        }
+
+        .policy-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .policy-section {
+            padding: 1.15rem 1.2rem;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .policy-section h2 {
+            font-size: 1.08rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.7rem;
+            color: #fff;
+        }
+
+        .policy-section p,
+        .policy-section li {
+            color: rgba(255, 255, 255, 0.74);
+            font-size: 0.96rem;
+            line-height: 1.72;
+        }
+
+        .policy-section p + p,
+        .policy-section ul {
+            margin-top: 0.8rem;
+        }
+
+        .policy-section ul {
+            padding-left: 1.2rem;
+        }
+
+        .policy-section li + li {
+            margin-top: 0.45rem;
+        }
+
+        .subheading {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.44);
+            margin-top: 0.95rem;
+        }
+
+        .policy-section a,
+        .footer-note a {
+            color: #f9a8d4;
+            text-decoration: none;
+        }
+
+        .policy-section a:hover,
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        @media (max-width: 640px) {
+            .page-shell {
+                padding: 20px 16px 48px;
+            }
+
+            .topbar {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 28px;
+            }
+
+            .hero-card,
+            .policy-card {
+                border-radius: 24px;
+            }
+
+            .hero-card,
+            .policy-card {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero-card {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+
+            .policy-card {
+                padding-top: 22px;
+                padding-bottom: 22px;
+            }
+
+            .policy-section {
+                padding: 1rem;
+                border-radius: 18px;
+            }
+
+            .highlight-chip {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-emojis" id="floatingEmojis" aria-hidden="true"></div>
+
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="./index.html" aria-label="Emojily home">
+                <span class="brand-mark">😊</span>
+                <span class="brand-copy">
+                    <strong>Emojily</strong>
+                    <span>Terms &amp; Conditions</span>
+                </span>
+            </a>
+
+            <div class="topbar-actions">
+                <a class="back-link" href="./privacy-policy.html">Privacy Policy</a>
+                <a class="back-link" href="./index.html">← Back to home</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-card">
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Legal information
+                    </div>
+                    <h1>Terms, without the cold corporate wrapper.</h1>
+                    <p class="hero-copy">
+                        These Terms &amp; Conditions describe how the Emojily app may be used, the limits around the
+                        service, and what happens when the app changes, charges apply, or support is needed.
+                    </p>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-chip">
+                            <span>Effective date</span>
+                            <strong>March 20, 2026</strong>
+                        </div>
+                        <div class="highlight-chip">
+                            <span>Service</span>
+                            <strong>Emojily mobile app</strong>
+                        </div>
+                        <div class="highlight-chip">
+                            <span>Contact</span>
+                            <strong>support@Emojily.app</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <article class="policy-card">
+                <div class="policy-grid">
+                    <section class="policy-section">
+                        <h2>Overview</h2>
+                        <p>
+                            These terms and conditions apply to the Emojily app, hereby referred to as the
+                            &quot;Application&quot;, for mobile devices that was created by Gheorghe Cojocaru, hereby
+                            referred to as the &quot;Service Provider&quot;, as a Freemium service.
+                        </p>
+                        <p>
+                            Upon downloading or utilizing the Application, you are automatically agreeing to the
+                            following terms. It is strongly advised that you thoroughly read and understand these terms
+                            prior to using the Application.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Ownership and Restrictions</h2>
+                        <p>
+                            Unauthorized copying, modification of the Application, any part of the Application, or our
+                            trademarks is strictly prohibited. Any attempts to extract the source code of the
+                            Application, translate the Application into other languages, or create derivative versions
+                            are not permitted.
+                        </p>
+                        <p>
+                            All trademarks, copyrights, database rights, and other intellectual property rights related
+                            to the Application remain the property of the Service Provider.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Service Changes and Charges</h2>
+                        <p>
+                            The Service Provider is dedicated to ensuring that the Application is as beneficial and
+                            efficient as possible. As such, they reserve the right to modify the Application or charge
+                            for their services at any time and for any reason.
+                        </p>
+                        <p>
+                            The Service Provider assures you that any charges for the Application or its services will
+                            be clearly communicated to you.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Device Security and Personal Data</h2>
+                        <p>
+                            The Application stores and processes personal data that you have provided to the Service
+                            Provider in order to provide the Service. It is your responsibility to maintain the
+                            security of your phone and access to the Application.
+                        </p>
+                        <p>
+                            The Service Provider strongly advise against jailbreaking or rooting your phone, which
+                            involves removing software restrictions and limitations imposed by the official operating
+                            system of your device. Such actions could expose your phone to malware, viruses, malicious
+                            programs, compromise your phone&apos;s security features, and may result in the Application
+                            not functioning correctly or at all.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Third-Party Services</h2>
+                        <p>
+                            Please note that the Application utilizes third-party services that have their own Terms
+                            and Conditions.
+                        </p>
+                        <p class="subheading">Third-party terms</p>
+                        <ul>
+                            <li>
+                                <a href="https://amplitude.com/terms" target="_blank" rel="noopener noreferrer">Amplitude</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Connectivity and Network Charges</h2>
+                        <p>
+                            Please be aware that the Service Provider does not assume responsibility for certain
+                            aspects. Some functions of the Application require an active internet connection, which can
+                            be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held
+                            responsible if the Application does not function at full capacity due to lack of access to
+                            Wi-Fi or if you have exhausted your data allowance.
+                        </p>
+                        <p>
+                            If you are using the Application outside of a Wi-Fi area, please be aware that your mobile
+                            network provider&apos;s agreement terms still apply. Consequently, you may incur charges
+                            from your mobile provider for data usage during the connection to the Application, or other
+                            third-party charges.
+                        </p>
+                        <p>
+                            By using the Application, you accept responsibility for any such charges, including roaming
+                            data charges if you use the Application outside of your home territory, such as region or
+                            country, without disabling data roaming. If you are not the bill payer for the device on
+                            which you are using the Application, they assume that you have obtained permission from the
+                            bill payer.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Your Device and Service Accuracy</h2>
+                        <p>
+                            Similarly, the Service Provider cannot always assume responsibility for your usage of the
+                            Application. For instance, it is your responsibility to ensure that your device remains
+                            charged. If your device runs out of battery and you are unable to access the Service, the
+                            Service Provider cannot be held responsible.
+                        </p>
+                        <p>
+                            In terms of the Service Provider&apos;s responsibility for your use of the Application, it is
+                            important to note that while they strive to ensure that it is updated and accurate at all
+                            times, they do rely on third parties to provide information to them so that they can make
+                            it available to you.
+                        </p>
+                        <p>
+                            The Service Provider accepts no liability for any loss, direct or indirect, that you
+                            experience as a result of relying entirely on this functionality of the Application.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Updates and Termination</h2>
+                        <p>
+                            The Service Provider may wish to update the Application at some point. The Application is
+                            currently available as per the requirements for the operating system, and for any
+                            additional systems they decide to extend the availability of the Application to, may
+                            change, and you will need to download the updates if you want to continue using the
+                            Application.
+                        </p>
+                        <p>
+                            The Service Provider does not guarantee that it will always update the Application so that
+                            it is relevant to you and or compatible with the particular operating system version
+                            installed on your device. However, you agree to always accept updates to the Application
+                            when offered to you.
+                        </p>
+                        <p>
+                            The Service Provider may also wish to cease providing the Application and may terminate its
+                            use at any time without providing termination notice to you. Unless they inform you
+                            otherwise, upon any termination, the rights and licenses granted to you in these terms will
+                            end, you must cease using the Application, and if necessary, delete it from your device.
+                        </p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Changes to These Terms and Conditions</h2>
+                        <p>
+                            The Service Provider may periodically update their Terms and Conditions. Therefore, you are
+                            advised to review this page regularly for any changes. The Service Provider will notify you
+                            of any changes by posting the new Terms and Conditions on this page.
+                        </p>
+                        <p>These terms and conditions are effective as of March 20, 2026.</p>
+                    </section>
+
+                    <section class="policy-section">
+                        <h2>Contact Us</h2>
+                        <p>
+                            If you have any questions or suggestions about the Terms and Conditions, please do not
+                            hesitate to contact the Service Provider at
+                            <a href="mailto:support@Emojily.app">support@Emojily.app</a>.
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <p class="footer-note">
+                Source content adapted from the provided Terms &amp; Conditions and originally generated with the
+                <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">App Privacy Policy Generator</a>.
+            </p>
+        </main>
+    </div>
+
+    <script>
+        const emojis = ['😊', '😴', '😢', '🥰', '😤', '🤔', '😎', '🥳', '😌', '🫠'];
+        const container = document.getElementById('floatingEmojis');
+
+        for (let i = 0; i < 12; i++) {
+            const el = document.createElement('span');
+            el.className = 'floating-emoji';
+            el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            el.style.left = Math.random() * 100 + '%';
+            el.style.animationDuration = (16 + Math.random() * 20) + 's';
+            el.style.animationDelay = -(Math.random() * 30) + 's';
+            el.style.fontSize = (1.2 + Math.random() * 1.4) + 'rem';
+            container.appendChild(el);
+        }
+    </script>
+</body>
+</html>
