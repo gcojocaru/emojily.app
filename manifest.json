@@ -1,0 +1,21 @@
+{
+  "name": "Emojily — Daily Mood Journal & Insights",
+  "short_name": "Emojily",
+  "description": "Track your daily mood with emojis. A gentle mood journal with a mood calendar, 30-day insights, and daily reminders.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

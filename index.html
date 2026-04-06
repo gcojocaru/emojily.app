@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emojily - Coming Soon</title>
-    <meta name="description" content="Emojily - Track your daily mood with emojis. Coming soon to the App Store.">
+
+    <!-- Primary SEO -->
+    <title>Emojily — Daily Mood Journal & Emoji Tracker for iOS</title>
+    <meta name="description" content="Track your daily mood with emojis. Emojily is a free iOS mood journal with a mood calendar, 30-day insights, context tags, and gentle reminders. Download on the App Store.">
+    <meta name="keywords" content="mood tracker, mood journal, emoji diary, daily mood, emotional wellness, mood calendar, mood insights, iOS app, mental health, self care, mood logging">
+    <meta name="author" content="Gheorghe Cojocaru">
+    <link rel="canonical" href="https://emojily.app/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emojily.app/">
+    <meta property="og:title" content="Emojily — Daily Mood Journal & Emoji Tracker">
+    <meta property="og:description" content="One emoji. Every day. Track your mood with emojis, spot patterns with 30-day insights, and reflect without pressure. Free on the App Store.">
+    <meta property="og:image" content="https://emojily.app/og-image-icon.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:site_name" content="Emojily">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Emojily — Daily Mood Journal & Emoji Tracker">
+    <meta name="twitter:description" content="One emoji. Every day. Track your mood, spot patterns, reflect without pressure. Free on the App Store.">
+    <meta name="twitter:image" content="https://emojily.app/og-image-icon.png">
+
+    <!-- Apple Smart Banner -->
+    <meta name="apple-itunes-app" content="app-id=6760365865">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Web manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -19,8 +57,8 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             background: #0a0a0f;
             color: #fff;
             overflow-x: hidden;
@@ -65,8 +103,9 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            padding: 2rem;
-            max-width: 520px;
+            padding: 4rem 2rem 2rem;
+            max-width: 720px;
+            width: 100%;
         }
 
         .logo-emoji {
@@ -111,7 +150,7 @@
             font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.7);
             font-weight: 500;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.25rem;
             backdrop-filter: blur(10px);
         }
 
@@ -128,57 +167,23 @@
             50% { opacity: 0.3; }
         }
 
-        .notify-form {
-            display: flex;
-            gap: 0.5rem;
-            max-width: 400px;
-            margin: 0 auto 2rem;
+        .app-store-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: transform 0.15s, opacity 0.2s;
         }
 
-        .notify-form input {
-            flex: 1;
-            padding: 0.8rem 1.2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            font-size: 0.95rem;
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s, background 0.2s;
-            backdrop-filter: blur(10px);
+        .app-store-link:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
 
-        .notify-form input::placeholder {
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .notify-form input:focus {
-            border-color: rgba(196, 181, 253, 0.4);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .notify-form button {
-            padding: 0.8rem 1.5rem;
-            border-radius: 12px;
-            border: none;
-            background: linear-gradient(135deg, #8b5cf6, #a855f7);
-            color: #fff;
-            font-size: 0.95rem;
-            font-weight: 600;
-            font-family: inherit;
-            cursor: pointer;
-            transition: transform 0.15s, box-shadow 0.2s;
-            white-space: nowrap;
-        }
-
-        .notify-form button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
-        }
-
-        .notify-form button:active {
+        .app-store-link:active {
             transform: translateY(0);
+        }
+
+        .app-store-link img {
+            height: 54px;
         }
 
         .features {
@@ -206,12 +211,6 @@
             font-weight: 500;
         }
 
-        .success-msg {
-            display: none;
-            color: #34d399;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
 
         .legal-links {
             display: flex;
@@ -246,58 +245,227 @@
             color: rgba(255, 255, 255, 0.34);
         }
 
+        /* Screenshots section — breaks out of .container to go full-width */
+        .screenshots-wrapper {
+            position: relative;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 2rem 0 0;
+        }
+
+        .screenshots-wrapper::before,
+        .screenshots-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .screenshots-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, #0a0a0f 0%, transparent 100%);
+        }
+
+        .screenshots-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, #0a0a0f 0%, transparent 100%);
+        }
+
+        .screenshots {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 2rem 0;
+        }
+
+        .screenshots::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshots-track {
+            display: flex;
+            gap: 1.25rem;
+            padding: 0 6rem;
+            width: max-content;
+            margin: 0 auto;
+        }
+
+        .screenshots-track img {
+            height: 520px;
+            width: auto;
+            border-radius: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .screenshots-track img:hover {
+            transform: scale(1.03) translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+        }
+
+        /* Description section */
+        .app-description {
+            margin: 2rem 0 3rem;
+            text-align: center;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-description h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-description p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.25rem;
+        }
+
+        .app-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .screenshots-track img {
+                height: 420px;
+            }
+            .screenshots-track {
+                padding: 0 3rem;
+            }
+            .screenshots-wrapper::before,
+            .screenshots-wrapper::after {
+                width: 60px;
+            }
+        }
+
         @media (max-width: 480px) {
             h1 { font-size: 2.2rem; }
             .tagline { font-size: 1rem; }
-            .notify-form { flex-direction: column; }
             .features { gap: 1.5rem; }
             .legal-links { margin-top: 2rem; }
+            .screenshots-track img {
+                height: 360px;
+            }
+            .screenshots-track {
+                gap: 1rem;
+                padding: 0 2rem;
+            }
+            .screenshots-wrapper::before,
+            .screenshots-wrapper::after {
+                width: 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="bg-gradient"></div>
-    <div class="floating-emojis" id="floatingEmojis"></div>
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="floating-emojis" id="floatingEmojis" aria-hidden="true"></div>
 
-    <div class="container">
-        <div class="logo-emoji">😊</div>
-        <h1>Emojily</h1>
-        <p class="tagline">Track your daily mood with emojis.<br>Understand your emotions, one day at a time.</p>
+    <main class="container">
+        <header>
+            <div class="logo-emoji" role="img" aria-label="Emojily app logo">😊</div>
+            <h1>Emojily</h1>
+            <p class="tagline">Track your daily mood with emojis.<br>Understand your emotions, one day at a time.</p>
 
-        <div class="badge">
-            <span class="dot"></span>
-            Coming soon to the App Store
-        </div>
+            <div class="badge" aria-label="App status">
+                <span class="dot" aria-hidden="true"></span>
+                Available on the App Store
+            </div>
+            <br>
+            <a class="app-store-link" href="https://apps.apple.com/us/app/emojily-feel-reflect-track/id6760365865" target="_blank" rel="noopener noreferrer" aria-label="Download Emojily on the App Store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1702944000" alt="Download on the App Store">
+            </a>
+        </header>
 
-        <form class="notify-form" id="notifyForm">
-            <input type="email" placeholder="Enter your email" required aria-label="Email address">
-            <button type="submit">Notify Me</button>
-        </form>
+        <section class="screenshots-wrapper" aria-label="App screenshots">
+            <div class="screenshots">
+                <div class="screenshots-track">
+                    <img src="./screenshots/01-hero.png" alt="Emojily — One emoji, every day. The gentlest daily mood check-in for iOS" loading="lazy" width="644" height="1400">
+                    <img src="./screenshots/02-mood-picker.png" alt="Emojily mood picker — tap how you feel with 12 emotions and zero overthinking" loading="lazy" width="644" height="1400">
+                    <img src="./screenshots/03-context.png" alt="Emojily context tags — name what shaped your day with tags like Work, Friends, or Exercise" loading="lazy" width="644" height="1400">
+                    <img src="./screenshots/04-calendar.png" alt="Emojily mood calendar — see your month painted in emojis at a glance" loading="lazy" width="644" height="1400">
+                    <img src="./screenshots/05-insights.png" alt="Emojily insights — spot your emotional patterns with 30 days of mood trends" loading="lazy" width="644" height="1400">
+                    <img src="./screenshots/06-reminders.png" alt="Emojily daily reminders — a gentle nudge at your chosen time to check in" loading="lazy" width="644" height="1400">
+                </div>
+            </div>
+        </section>
 
-        <p class="success-msg" id="successMsg">You're on the list! We'll let you know when we launch.</p>
+        <section class="app-description">
+            <h2>Feel, Reflect, Track</h2>
+            <p>Choose an emoji that matches your mood and add a short note to capture the moment. Emojily makes daily check-ins effortless — no streaks, no scores, just you.</p>
+            <p>See your month painted in emojis on the mood calendar, spot emotional patterns with 30-day insights, and set gentle reminders so you never forget to check in.</p>
+        </section>
 
-        <div class="features">
+        <section class="features" aria-label="Key features">
             <div class="feature">
-                <span class="feature-icon">📅</span>
+                <span class="feature-icon" aria-hidden="true">📅</span>
                 <span class="feature-text">Daily tracking</span>
             </div>
             <div class="feature">
-                <span class="feature-icon">📊</span>
+                <span class="feature-icon" aria-hidden="true">📊</span>
                 <span class="feature-text">Mood insights</span>
             </div>
             <div class="feature">
-                <span class="feature-icon">🔒</span>
+                <span class="feature-icon" aria-hidden="true">🔒</span>
                 <span class="feature-text">Private &amp; secure</span>
             </div>
-        </div>
+        </section>
 
-        <div class="legal-links">
-            <a class="legal-link" href="./privacy-policy.html">Privacy Policy</a>
-            <a class="legal-link" href="./terms-and-conditions.html">Terms &amp; Conditions</a>
-            <a class="legal-link" href="mailto:support@Emojily.app">Contact</a>
-        </div>
-        <p class="footer-copy">Built for simple, private mood check-ins.</p>
-    </div>
+        <footer>
+            <nav class="legal-links" aria-label="Legal">
+                <a class="legal-link" href="./privacy-policy.html">Privacy Policy</a>
+                <a class="legal-link" href="./terms-and-conditions.html">Terms &amp; Conditions</a>
+                <a class="legal-link" href="mailto:support@Emojily.app">Contact</a>
+            </nav>
+            <p class="footer-copy">&copy; 2025 Emojily. Built for simple, private mood check-ins.</p>
+        </footer>
+    </main>
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Emojily: Feel, Reflect & Track",
+        "alternateName": "Emojily",
+        "description": "Track your daily mood with emojis. A gentle mood journal with a mood calendar, 30-day insights, context tags, and daily reminders.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS",
+        "url": "https://emojily.app/",
+        "installUrl": "https://apps.apple.com/us/app/emojily-feel-reflect-track/id6760365865",
+        "screenshot": [
+            "https://emojily.app/screenshots/01-hero.png",
+            "https://emojily.app/screenshots/02-mood-picker.png",
+            "https://emojily.app/screenshots/04-calendar.png",
+            "https://emojily.app/screenshots/05-insights.png"
+        ],
+        "image": "https://emojily.app/og-image-icon.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Gheorghe Cojocaru"
+        },
+        "inLanguage": ["en", "ca", "de", "es", "fr", "it", "nl", "pl", "pt-BR", "ro", "ru", "sv", "tr", "uk"],
+        "featureList": "Mood Calendar, 30-Day Insights, Context Tags, Daily Notes, Daily Reminders, Mood Export, Weekly Summary, Privacy First"
+    }
+    </script>
 
     <script>
         // Floating background emojis
@@ -314,13 +482,6 @@
             el.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
             container.appendChild(el);
         }
-
-        // Form handling (client-side only)
-        document.getElementById('notifyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            this.style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
-        });
     </script>
 </body>
 </html>
