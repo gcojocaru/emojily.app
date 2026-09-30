@@ -2,461 +2,577 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- Primary SEO -->
-    <title>Emojily — Daily Mood Journal & Emoji Tracker for iOS</title>
-    <meta name="description" content="Track your daily mood with emojis. Emojily is a free iOS mood journal with a mood calendar, pattern insights, weekly summaries, goals &amp; streaks, and gentle reminders. Download on the App Store.">
-    <meta name="keywords" content="mood tracker, mood journal, emoji diary, daily mood, emotional wellness, mood calendar, mood insights, mood streaks, iOS app, mental health, self care, mood logging">
+    <title>Emojily — The One-Tap Mood Journal for iPhone</title>
+    <meta name="description" content="Emojily is the mood journal that takes one tap. Pick an emoji for today, add a tag or a note, and watch your month fill in — with a mood calendar, monthly recap stories, search, tap-to-log widgets and insights. Private in your iCloud. Free on the App Store.">
+    <meta name="keywords" content="mood tracker, mood journal, emoji diary, daily mood, mood calendar, mood recap, mood widget, emotional wellness, mood insights, mood streaks, iPhone app, self care, mood logging">
     <meta name="author" content="Gheorghe Cojocaru">
     <link rel="canonical" href="https://emojily.app/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.json">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://emojily.app/">
-    <meta property="og:title" content="Emojily — Daily Mood Journal & Emoji Tracker">
-    <meta property="og:description" content="One emoji. Every day. Track your mood with emojis, spot patterns, build streaks, and reflect without pressure. Free on the App Store.">
-    <meta property="og:image" content="https://emojily.app/og-image-icon.png">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="1024">
+    <meta property="og:title" content="Emojily — One emoji. Every day.">
+    <meta property="og:description" content="The one-tap mood journal for iPhone. Log how you feel in a tap, watch your month fill in, and get it back as a story at the end of every month.">
+    <meta property="og:image" content="https://emojily.app/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Emojily — One emoji. Every day. The one-tap mood journal for iPhone.">
     <meta property="og:site_name" content="Emojily">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Emojily — Daily Mood Journal & Emoji Tracker">
-    <meta name="twitter:description" content="One emoji. Every day. Track your mood, spot patterns, build streaks, reflect without pressure. Free on the App Store.">
-    <meta name="twitter:image" content="https://emojily.app/og-image-icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emojily — One emoji. Every day.">
+    <meta name="twitter:description" content="The one-tap mood journal for iPhone. Log how you feel in a tap and watch your month fill in.">
+    <meta name="twitter:image" content="https://emojily.app/og-image.png">
 
     <!-- Apple Smart Banner -->
     <meta name="apple-itunes-app" content="app-id=6760365865">
 
     <!-- Theme -->
-    <meta name="theme-color" content="#0a0a0f">
-    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#edf0f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141721" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
 
-    <!-- Web manifest -->
-    <link rel="manifest" href="./manifest.json">
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #0a0a0f;
-            color: #fff;
-            overflow-x: hidden;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .bg-gradient {
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(131, 58, 180, 0.15) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 40% at 80% 60%, rgba(253, 121, 168, 0.12) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 30% at 50% 80%, rgba(252, 176, 69, 0.08) 0%, transparent 70%);
-            z-index: 0;
-        }
-
-        .floating-emojis {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .floating-emoji {
-            position: absolute;
-            font-size: 2rem;
-            opacity: 0.08;
-            animation: float linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(110vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(-10vh) rotate(360deg);
-            }
-        }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 4rem 2rem 2rem;
-            max-width: 720px;
-            width: 100%;
-        }
-
-        .logo-emoji {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.25rem;
-            background: linear-gradient(135deg, #fff 0%, #c4b5fd 50%, #f9a8d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tagline {
-            font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.55);
-            font-weight: 400;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.25rem;
-            border-radius: 100px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 500;
-            margin-bottom: 1.25rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .badge .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #34d399;
-            animation: blink 2s ease-in-out infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .app-store-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            transition: transform 0.15s, opacity 0.2s;
-        }
-
-        .app-store-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .app-store-link:active {
-            transform: translateY(0);
-        }
-
-        .app-store-link img {
-            height: 54px;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .feature-icon {
-            font-size: 1.5rem;
-        }
-
-        .feature-text {
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
-            font-weight: 500;
-        }
-
-
-        .legal-links {
-            display: flex;
-            justify-content: center;
-            gap: 0.9rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .legal-link {
-            color: rgba(255, 255, 255, 0.58);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 0.55rem 0.9rem;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.04);
-            backdrop-filter: blur(10px);
-            transition: color 0.2s, border-color 0.2s, transform 0.2s;
-        }
-
-        .legal-link:hover {
-            color: rgba(255, 255, 255, 0.88);
-            border-color: rgba(196, 181, 253, 0.28);
-            transform: translateY(-1px);
-        }
-
-        .footer-copy {
-            margin-top: 0.95rem;
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.34);
-        }
-
-        /* Screenshots section — breaks out of .container to go full-width */
-        .screenshots-wrapper {
-            position: relative;
-            width: 100vw;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 2rem 0 0;
-        }
-
-        .screenshots-wrapper::before,
-        .screenshots-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 120px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .screenshots-wrapper::before {
-            left: 0;
-            background: linear-gradient(to right, #0a0a0f 0%, transparent 100%);
-        }
-
-        .screenshots-wrapper::after {
-            right: 0;
-            background: linear-gradient(to left, #0a0a0f 0%, transparent 100%);
-        }
-
-        .screenshots {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            padding: 2rem 0;
-        }
-
-        .screenshots::-webkit-scrollbar {
-            display: none;
-        }
-
-        .screenshots-track {
-            display: flex;
-            gap: 1.25rem;
-            padding: 0 6rem;
-            width: max-content;
-            margin: 0 auto;
-        }
-
-        .screenshots-track img {
-            height: 520px;
-            width: auto;
-            border-radius: 16px;
-            flex-shrink: 0;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .screenshots-track img:hover {
-            transform: scale(1.03) translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
-        }
-
-        /* Description section */
-        .app-description {
-            margin: 2rem 0 3rem;
-            text-align: center;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .app-description h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .app-description p {
-            font-size: 1rem;
-            line-height: 1.75;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 1.25rem;
-        }
-
-        .app-description p:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 768px) {
-            .screenshots-track img {
-                height: 420px;
-            }
-            .screenshots-track {
-                padding: 0 3rem;
-            }
-            .screenshots-wrapper::before,
-            .screenshots-wrapper::after {
-                width: 60px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.2rem; }
-            .tagline { font-size: 1rem; }
-            .features { gap: 1.5rem; }
-            .legal-links { margin-top: 2rem; }
-            .screenshots-track img {
-                height: 360px;
-            }
-            .screenshots-track {
-                gap: 1rem;
-                padding: 0 2rem;
-            }
-            .screenshots-wrapper::before,
-            .screenshots-wrapper::after {
-                width: 40px;
-            }
-        }
-    </style>
+    <link rel="preload" as="image" href="./img/app/today.webp" type="image/webp">
+    <link rel="stylesheet" href="./site.css">
 </head>
 <body>
-    <div class="bg-gradient" aria-hidden="true"></div>
-    <div class="floating-emojis" id="floatingEmojis" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <main class="container">
-        <header>
-            <div class="logo-emoji" role="img" aria-label="Emojily app logo">😊</div>
-            <h1>Emojily</h1>
-            <p class="tagline">Track your daily mood with emojis.<br>Understand your emotions, one day at a time.</p>
-
-            <div class="badge" aria-label="App status">
-                <span class="dot" aria-hidden="true"></span>
-                Available on the App Store
-            </div>
-            <br>
-            <a class="app-store-link" href="https://apps.apple.com/us/app/emojily-feel-reflect-track/id6760365865" target="_blank" rel="noopener noreferrer" aria-label="Download Emojily on the App Store">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1702944000" alt="Download on the App Store">
+    <header class="site-nav">
+        <nav class="wrap nav-inner" aria-label="Main">
+            <a class="brand" href="./" aria-label="Emojily home">
+                <img src="./img/icon-256.png" alt="" width="36" height="36">
+                Emojily
             </a>
-        </header>
+            <ul class="nav-links">
+                <li><a href="#how">How it works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#premium">Premium</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a class="btn btn-primary" href="https://apps.apple.com/app/emojily-feel-reflect-track/id6760365865">Get the app</a>
+        </nav>
+    </header>
 
-        <section class="screenshots-wrapper" aria-label="App screenshots">
-            <div class="screenshots">
-                <div class="screenshots-track">
-                    <img src="./screenshots/01-hero.png" alt="Emojily — One emoji, every day. The gentlest daily mood check-in for iOS" loading="lazy" width="644" height="1400">
-                    <img src="./screenshots/02-calendar.png" alt="Emojily mood calendar — see your month painted in emojis at a glance" loading="lazy" width="644" height="1400">
-                    <img src="./screenshots/03-patterns.png" alt="Emojily pattern highlights — discover what lifts your mood and what weighs on it" loading="lazy" width="644" height="1400">
-                    <img src="./screenshots/04-weekly-summary.png" alt="Emojily weekly summary — your week's mood flow, top mood, and top tag at a glance" loading="lazy" width="644" height="1400">
-                    <img src="./screenshots/05-goals-streaks.png" alt="Emojily goals and streaks — build consistency with small, flexible mood goals" loading="lazy" width="644" height="1400">
-                    <img src="./screenshots/06-privacy.png" alt="Emojily privacy — your mood data never leaves your iCloud, no servers, no accounts" loading="lazy" width="644" height="1400">
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="aurora" aria-hidden="true">
+                <span style="--mood: var(--excited); --size: 460px; top: -8%; right: 6%; --dx: -50px; --dy: 30px;"></span>
+                <span style="--mood: var(--sad); --size: 420px; bottom: -12%; right: -6%; --dx: -30px; --dy: -40px;"></span>
+                <span style="--mood: var(--calm); --size: 360px; bottom: 4%; left: 34%; --dx: 40px; --dy: -20px;"></span>
+                <span style="--mood: var(--stressed); --size: 300px; top: -14%; left: -8%; --dx: 30px; --dy: 30px;"></span>
+            </div>
+
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <span class="chip">✨ New in 1.5 — your month, as a story</span>
+                    <h1 class="display">One emoji.<br><span class="gradient-ink">Every day.</span></h1>
+                    <p class="lead">Emojily is the mood journal that takes one tap. Pick the face that fits today, add a tag or a few words if you like — and watch your month fill in.</p>
+                    <div class="hero-actions">
+                        <a class="store-badge" href="https://apps.apple.com/app/emojily-feel-reflect-track/id6760365865" aria-label="Download Emojily on the App Store">
+                            <picture>
+                                <source media="(prefers-color-scheme: dark)" srcset="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83">
+                                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="168" height="56">
+                            </picture>
+                        </a>
+                        <a class="btn btn-ghost" href="#how">See how it works</a>
+                    </div>
+                    <ul class="hero-facts">
+                        <li>Free to download</li>
+                        <li>No account needed</li>
+                        <li>In 14 languages</li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="phone">
+                        <img src="./img/app/today.webp" alt="Emojily's Today screen: “How did today feel?” above twelve emoji moods — Happy, Calm, Sad, Angry, Confident, Neutral, Crying, Nervous, Grateful, Touched, Tired and Overwhelmed." width="720" height="1564" fetchpriority="high">
+                    </div>
+                    <div class="float float-1" aria-hidden="true"><div class="tile mood-excited">😊</div></div>
+                    <div class="float float-2" aria-hidden="true"><div class="tile mood-calm">😌</div></div>
+                    <div class="float float-3" aria-hidden="true"><div class="tile mood-sad">😴</div></div>
+                    <div class="float float-4" aria-hidden="true"><div class="tile mood-stressed">😬</div></div>
+                    <div class="float float-5 card float-card" aria-hidden="true">
+                        <div class="tile mood-excited">🔥</div>
+                        <div>42 days in a row<small>Current streak</small></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="app-description">
-            <h2>Feel, Reflect, Track</h2>
-            <p>Choose an emoji that matches your mood and add a short note to capture the moment. Emojily makes daily check-ins effortless — no scores, no pressure, just you.</p>
-            <p>See your month painted in emojis on the mood calendar, discover what lifts and weighs on your mood with pattern highlights, catch a weekly summary of how you've been feeling, and build consistency with small, flexible goals and streaks.</p>
+        <!-- How it works -->
+        <section class="section" id="how">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">How it works</span>
+                    <h2 class="section-title">A few seconds a day. That's the whole habit.</h2>
+                    <p class="lead">No blank page, no scores, no pressure. Just a quick check-in that adds up to something you can see.</p>
+                </div>
+
+                <ol class="steps" role="list">
+                    <li class="card step reveal">
+                        <div class="step-visual" aria-hidden="true">
+                            <div class="mini-picker">
+                                <span class="mood-excited">😊</span>
+                                <span class="mood-calm picked">😌</span>
+                                <span class="mood-sad">🙁</span>
+                                <span class="mood-stressed">😡</span>
+                                <span class="mood-excited">😎</span>
+                                <span class="mood-calm">😐</span>
+                                <span class="mood-sad">😢</span>
+                                <span class="mood-stressed">😬</span>
+                                <span class="mood-excited">😇</span>
+                                <span class="mood-calm">🥲</span>
+                                <span class="mood-sad">😴</span>
+                                <span class="mood-stressed">🤯</span>
+                            </div>
+                        </div>
+                        <span class="step-number">STEP 1</span>
+                        <h3>Tap how today felt</h3>
+                        <p>Twelve moods across excited, calm, sad and stressed. Long-press any of them to make it your own emoji.</p>
+                    </li>
+                    <li class="card step reveal">
+                        <div class="step-visual" aria-hidden="true">
+                            <div class="mini-tags">
+                                <div class="tag-row">
+                                    <span class="tag">Work</span>
+                                    <span class="tag">Friends</span>
+                                    <span class="tag on">Exercise</span>
+                                    <span class="tag">Family</span>
+                                    <span class="tag">Creative</span>
+                                    <span class="tag on">Rest</span>
+                                </div>
+                                <div class="mini-note">Yoga before work helped a lot.</div>
+                            </div>
+                        </div>
+                        <span class="step-number">STEP 2</span>
+                        <h3>Add what shaped it</h3>
+                        <p>Tag the day — work, friends, exercise, rest — and jot a note if you want to. Or skip it. It's your call.</p>
+                    </li>
+                    <li class="card step reveal">
+                        <div class="step-visual" aria-hidden="true">
+                            <div class="mini-calendar">
+                                <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b>
+                                <span>😊</span><span>😴</span><span>😐</span><span>😇</span><span>😎</span><span>😌</span><span>😊</span>
+                                <span>😌</span><span>🙁</span><span>😊</span><span>😬</span><span>😐</span><span>🥲</span><span class="today">😌</span>
+                                <span class="empty">15</span><span class="empty">16</span><span class="empty">17</span><span class="empty">18</span><span class="empty">19</span><span class="empty">20</span><span class="empty">21</span>
+                            </div>
+                        </div>
+                        <span class="step-number">STEP 3</span>
+                        <h3>Watch the pattern appear</h3>
+                        <p>Your calendar fills with faces, streaks build, and Insights show what lifts you and what weighs on you.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
 
-        <section class="features" aria-label="Key features">
-            <div class="feature">
-                <span class="feature-icon" aria-hidden="true">📅</span>
-                <span class="feature-text">Daily tracking</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon" aria-hidden="true">📊</span>
-                <span class="feature-text">Pattern insights</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon" aria-hidden="true">🔥</span>
-                <span class="feature-text">Goals &amp; streaks</span>
-            </div>
-            <div class="feature">
-                <span class="feature-icon" aria-hidden="true">🔒</span>
-                <span class="feature-text">Private &amp; secure</span>
+        <!-- Recap -->
+        <section class="section" id="features">
+            <div class="wrap feature">
+                <div class="feature-copy reveal">
+                    <span class="chip">✨ New in 1.5</span>
+                    <h2 class="section-title">Your month,<br>as a story.</h2>
+                    <p class="lead">When a month ends, Emojily turns it into a full-screen story you tap through — your most-felt mood, your longest streak, the shape of your week and your top three on the podium. Built from your own days, and ready to share as a video.</p>
+                    <ul class="checks">
+                        <li><span><strong>Your latest recap is always free</strong> — a card on Today says when it's ready.</span></li>
+                        <li><span><strong>Share it as a video</strong> — ready to post or send to a friend.</span></li>
+                        <li><span><strong>Rewatch every past month and year</strong> with Premium.</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual recap-visual reveal">
+                    <div class="aurora" aria-hidden="true">
+                        <span style="--mood: #ff5c9a; --size: 360px; top: 0; left: 8%;"></span>
+                        <span style="--mood: var(--sad); --size: 340px; bottom: 0; right: 4%; --dx: -40px;"></span>
+                    </div>
+                    <div class="phone">
+                        <img src="./img/app/recap.webp" alt="A monthly recap scene: “Most felt” above a large relaxed emoji, 7 of 30 days, “A mostly calm stretch.”" width="720" height="1564" loading="lazy">
+                    </div>
+                    <div class="card float-card" aria-hidden="true">
+                        <div class="tile">▶️</div>
+                        <div>Share as a video<small>From the story's last scene</small></div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <footer>
-            <nav class="legal-links" aria-label="Legal">
-                <a class="legal-link" href="./privacy-policy.html">Privacy Policy</a>
-                <a class="legal-link" href="./terms-and-conditions.html">Terms &amp; Conditions</a>
-                <a class="legal-link" href="mailto:support@Emojily.app">Contact</a>
-            </nav>
-            <p class="footer-copy">&copy; 2025 Emojily. Built for simple, private mood check-ins.</p>
-        </footer>
+        <!-- Log from anywhere -->
+        <section class="section">
+            <div class="wrap feature flip">
+                <div class="feature-copy reveal">
+                    <span class="chip">✨ New in 1.5</span>
+                    <h2 class="section-title">Log from wherever you are.</h2>
+                    <p class="lead">Tap a mood right on your Home Screen widget and it's saved — Emojily doesn't even need to open. Or reach today's picker from Control Center, the Action button or Siri.</p>
+                    <ul class="checks">
+                        <li><span><strong>Home Screen widget</strong> — tap to log, and see your week at a glance.</span></li>
+                        <li><span><strong>Control Center and the Action button</strong> — straight to today's picker.</span></li>
+                        <li><span><strong>Lock Screen and StandBy</strong> — today's mood where you'll see it.</span></li>
+                        <li><span><strong>Siri and Shortcuts</strong> — just say “Log my mood in Emojily.”</span></li>
+                    </ul>
+                </div>
+                <div class="feature-visual reveal">
+                    <div class="aurora" aria-hidden="true">
+                        <span style="--mood: var(--sad); --size: 340px; top: 0; right: 10%;"></span>
+                        <span style="--mood: var(--excited); --size: 280px; bottom: 0; left: 10%; --dx: 30px;"></span>
+                    </div>
+                    <div class="homescreen" role="img" aria-label="Illustration of the Emojily widget on a Home Screen: this week's moods, Monday to Thursday, and four mood buttons to log today with one tap.">
+                        <div class="widget">
+                            <div class="widget-head">
+                                <span class="widget-title">THIS WEEK</span>
+                                <span class="widget-icon">
+                                    <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 14h12M4 12V8M8 12V4M12 12V6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                            </div>
+                            <div class="widget-week">
+                                <div><span class="face">😊</span><small>MON</small></div>
+                                <div><span class="face">😴</span><small>TUE</small></div>
+                                <div><span class="face">😐</span><small>WED</small></div>
+                                <div><span class="face">😇</span><small>THU</small></div>
+                                <div><span class="face"><span class="open"></span></span><small>FRI</small></div>
+                                <div><span class="face"><span class="open"></span></span><small>SAT</small></div>
+                                <div><span class="face"><span class="open"></span></span><small>SUN</small></div>
+                            </div>
+                            <div class="widget-buttons">
+                                <span class="mood-excited">😊</span>
+                                <span class="mood-calm">😌</span>
+                                <span class="mood-sad">🙁</span>
+                                <span class="mood-stressed">😡</span>
+                            </div>
+                        </div>
+                        <div class="homescreen-row">
+                            <div class="control">
+                                <span class="control-glyph">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="currentColor"/><circle cx="15" cy="10" r="1.2" fill="currentColor"/><path d="M8.5 14.2c.9 1.3 2.1 2 3.5 2s2.6-.7 3.5-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                Log today
+                            </div>
+                            <div class="siri-bubble">“Log my mood in Emojily”</div>
+                        </div>
+                    </div>
+                    <p class="visual-note">Widget shown as an illustration. Its faces change with the day.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar and search -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Look back</span>
+                    <h2 class="section-title">Every day, right where you left it.</h2>
+                </div>
+                <div class="pair">
+                    <div class="pair-item reveal">
+                        <div class="phone">
+                            <img src="./img/app/calendar.webp" alt="The History calendar for April 2026, each logged day showing its emoji, with Wednesday, April 1 selected: Peaceful, tagged Exercise, “Long walk before dinner. Felt grounded again.”" width="720" height="1564" loading="lazy">
+                        </div>
+                        <div class="copy">
+                            <h3>Your month at a glance</h3>
+                            <p>Every day wears the face you picked. Tap one for its tags and note, or share the whole month as an image.</p>
+                        </div>
+                    </div>
+                    <div class="pair-item reveal">
+                        <div class="phone">
+                            <img src="./img/app/search.webp" alt="Search for “Work”: twelve days tagged Work or mentioning it, each with its mood, date and note — Peaceful, Strong, Steady, Heavy, Anxious." width="720" height="1564" loading="lazy">
+                        </div>
+                        <div class="copy">
+                            <span class="chip">New in 1.5</span>
+                            <h3>Find any day</h3>
+                            <p>Search every note, mood and tag. That week work got heavy? It's one search away.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Insights</span>
+                    <h2 class="section-title">See what lifts you — and what weighs on you.</h2>
+                    <p class="lead">A month of quick taps turns into something you can understand: the tags that go with your best days, your emotional balance, your streaks and your week in review.</p>
+                </div>
+
+                <div class="fan reveal">
+                    <div class="aurora" aria-hidden="true">
+                        <span style="--mood: var(--calm); --size: 380px; top: 10%; left: 22%;"></span>
+                        <span style="--mood: var(--excited); --size: 320px; top: 20%; right: 20%; --dx: -40px;"></span>
+                    </div>
+                    <div class="phone side left">
+                        <img src="./img/app/weekly-summary.webp" alt="Weekly Summary for April 6 to 12: the week's moods day by day, 7 of 7 days logged, top mood Happy, top tag Exercise." width="720" height="1564" loading="lazy">
+                    </div>
+                    <div class="phone center">
+                        <img src="./img/app/patterns.webp" alt="Insights: pattern highlights — Exercise lifts your mood, Work weighs on you, a shift from Excited to Calm — above your most frequent tags and emotional balance." width="720" height="1564" loading="lazy">
+                    </div>
+                    <div class="phone side right">
+                        <img src="./img/app/goals.webp" alt="Goals: check in regularly, 100 percent; make time to rest, 33 percent; a 42-day current and longest streak." width="720" height="1564" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="insight-points">
+                    <div class="card reveal">
+                        <h3><span class="tile mood-calm" style="width:40px;height:40px;font-size:20px;border-radius:12px;">🌿</span>Pattern highlights</h3>
+                        <p>What lifts your mood, what weighs on you, and the shifts worth noticing — found in your own tags and days.</p>
+                    </div>
+                    <div class="card reveal">
+                        <h3><span class="tile mood-excited" style="width:40px;height:40px;font-size:20px;border-radius:12px;">🗓️</span>Your week in review</h3>
+                        <p>Your week's flow, top mood and top tag. On iPhones with Apple Intelligence, a sentence about your week, written on your iPhone.</p>
+                    </div>
+                    <div class="card reveal">
+                        <h3><span class="tile mood-sad" style="width:40px;height:40px;font-size:20px;border-radius:12px;">🎯</span>Gentle goals</h3>
+                        <p>Small weekly goals — check in more, make time to rest — and a streak that forgives one missed day a month.</p>
+                    </div>
+                </div>
+                <p class="fine-print">Full Insights and the weekly summary come with <span class="premium-badge">PREMIUM</span>. Your first goal is free. The weekly sentence is in English for now.</p>
+            </div>
+        </section>
+
+        <!-- Privacy -->
+        <section class="section" id="privacy">
+            <div class="wrap">
+                <div class="card-hero privacy reveal">
+                    <div class="privacy-head">
+                        <div class="tile" aria-hidden="true">🔒</div>
+                        <div>
+                            <h2 class="section-title">Private by design.</h2>
+                            <p class="lead">Your journal is yours. It lives in your own iCloud — there's no Emojily server keeping it, and no account to create.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-grid">
+                        <div class="card">
+                            <div class="tile mood-sad" aria-hidden="true">☁️</div>
+                            <div><h3>In your iCloud</h3><p>Kept on your iPhone and in your private iCloud database — not on a server of ours.</p></div>
+                        </div>
+                        <div class="card">
+                            <div class="tile mood-calm" aria-hidden="true">🙌</div>
+                            <div><h3>No account</h3><p>No sign-up, no email, no password. Open it and log.</p></div>
+                        </div>
+                        <div class="card">
+                            <div class="tile mood-excited" aria-hidden="true">🔐</div>
+                            <div><h3>App Lock</h3><p>Keep your journal behind Face ID or your passcode.</p></div>
+                        </div>
+                        <div class="card">
+                            <div class="tile mood-sad" aria-hidden="true">📱</div>
+                            <div><h3>Written on your iPhone</h3><p>The sentences Apple Intelligence writes about your days are made on-device.</p></div>
+                        </div>
+                        <div class="card">
+                            <div class="tile mood-stressed" aria-hidden="true">🗑️</div>
+                            <div><h3>Delete anything</h3><p>Remove a single day, or erase everything — on all your devices.</p></div>
+                        </div>
+                        <div class="card">
+                            <div class="tile mood-stressed" aria-hidden="true">❤️</div>
+                            <div><h3>Apple Health, if you like</h3><p>Save each mood to Health as a State of Mind. Off until you turn it on.</p></div>
+                        </div>
+                    </div>
+                    <p class="privacy-note">Emojily collects anonymous usage analytics to improve the app. They never include what you write. The details are in the <a href="./privacy-policy.html">privacy policy</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- More -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">And there's more</span>
+                    <h2 class="section-title">Small things that make it yours.</h2>
+                </div>
+                <div class="more-grid">
+                    <div class="card reveal">
+                        <div class="tile mood-excited" aria-hidden="true">✨</div>
+                        <h3>A living emoji</h3>
+                        <p>Once your day is logged, tilt your phone or tap your emoji and it comes alive.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-calm" aria-hidden="true">🎨</div>
+                        <h3>Your own moods and tags</h3>
+                        <p>Swap in any emoji you like and add the tags that fit your life.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-sad" aria-hidden="true">🔔</div>
+                        <h3>Gentle reminders</h3>
+                        <p>A daily nudge at a time you pick — or a surprise one, somewhere inside a window you set.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-stressed" aria-hidden="true">🛟</div>
+                        <h3>Streak protection</h3>
+                        <p>One grace day a month, so a busy day doesn't reset your streak.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-excited" aria-hidden="true">🖼️</div>
+                        <h3>Share your month</h3>
+                        <p>Turn your calendar into an image of the month, ready to post or send.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-calm" aria-hidden="true">📤</div>
+                        <h3>Export it all</h3>
+                        <p>Take your journal with you as CSV, JSON or a PDF report. <span class="premium-badge">PREMIUM</span></p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-sad" aria-hidden="true">🌍</div>
+                        <h3>In 14 languages</h3>
+                        <p>English, Català, Deutsch, Español, Français, Italiano, Nederlands, Polski, Português, Română, Русский, Svenska, Türkçe and Українська.</p>
+                    </div>
+                    <div class="card reveal">
+                        <div class="tile mood-stressed" aria-hidden="true">🎭</div>
+                        <h3>Five app icons</h3>
+                        <p>Pick the face that greets you on your Home Screen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium -->
+        <section class="section" id="premium">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">Free and Premium</span>
+                    <h2 class="section-title">Free to start. Premium when you want more.</h2>
+                    <p class="lead">Everything you need to log every day is free, with no ads. Premium is for seeing the bigger picture.</p>
+                </div>
+                <div class="plans">
+                    <div class="card plan reveal">
+                        <div class="plan-head"><h3>Free</h3></div>
+                        <p>Everything for the daily habit.</p>
+                        <ul class="checks">
+                            <li><span>Daily check-ins with tags and notes</span></li>
+                            <li><span>Calendar and search</span></li>
+                            <li><span>Widgets, Control Center and Siri</span></li>
+                            <li><span>Your latest monthly recap, shared as a video</span></li>
+                            <li><span>App Lock, Apple Health and reminders</span></li>
+                            <li><span>3 custom moods and tags, and 1 goal</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-hero plan reveal">
+                        <div class="plan-head"><h3>Premium</h3><span class="premium-badge">PREMIUM</span></div>
+                        <p>Everything in Free, plus the bigger picture.</p>
+                        <ul class="checks">
+                            <li><span>Full Insights — patterns, balance, streaks and trends</span></li>
+                            <li><span>The weekly summary</span></li>
+                            <li><span>Every past monthly and yearly recap</span></li>
+                            <li><span>Export to CSV, JSON and PDF</span></li>
+                            <li><span>Up to 20 custom moods and tags, and 10 goals</span></li>
+                        </ul>
+                        <p class="plan-foot">Monthly or yearly subscription. Cancel anytime in your Apple Account settings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <div class="wrap">
+                <div class="section-head center reveal">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 class="section-title">Questions, answered.</h2>
+                </div>
+                <div class="faq">
+                    <details class="card reveal">
+                        <summary>Is Emojily free?</summary>
+                        <div><p>Yes. Logging, the calendar, search, widgets, reminders and your latest monthly recap are all free, with no ads. Premium adds full Insights, the weekly summary, every past recap, data export and more custom moods, tags and goals.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Do I need an account?</summary>
+                        <div><p>No. There's nothing to sign up for. Emojily keeps your journal in your own iCloud, so it's there when you move to a new iPhone.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Where is my data stored?</summary>
+                        <div><p>Your journal — moods, tags and notes — lives on your iPhone and in your private iCloud database. There's no Emojily server holding it.</p><p>To improve the app, Emojily collects anonymous usage analytics. They never include what you write. The details are in the <a href="./privacy-policy.html">privacy policy</a>.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Can I log without opening the app?</summary>
+                        <div><p>Yes. Tap a mood on the Home Screen widget and it's saved on the spot, or ask Siri: “Log my mood in Emojily.” The Control Center control and the Action button open straight to today's picker.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Which iPhones does it run on?</summary>
+                        <div><p>Any iPhone with iOS 26 or later. The sentences about your week and your day need an iPhone with Apple Intelligence, set to English.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Does it work with Apple Health?</summary>
+                        <div><p>If you'd like it to. Emojily can save each mood to Apple Health as a State of Mind. It only ever writes to Health, never reads from it, and it's off until you turn it on.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Can I delete a day, or everything?</summary>
+                        <div><p>Yes. Delete any day from the calendar, or erase everything from Settings. Erasing removes your journal from every device signed in to your iCloud.</p></div>
+                    </details>
+                    <details class="card reveal">
+                        <summary>Which languages does it speak?</summary>
+                        <div><p>Fourteen: English, Catalan, German, Spanish, French, Italian, Dutch, Polish, Portuguese (Brazil), Romanian, Russian, Swedish, Turkish and Ukrainian.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing call -->
+        <section class="section">
+            <div class="wrap">
+                <div class="card-hero cta reveal">
+                    <div class="aurora" aria-hidden="true">
+                        <span style="--mood: var(--excited); --size: 320px; top: -30%; left: 10%;"></span>
+                        <span style="--mood: var(--sad); --size: 320px; bottom: -40%; right: 8%; --dx: -40px;"></span>
+                        <span style="--mood: var(--calm); --size: 240px; bottom: -30%; left: 40%;"></span>
+                    </div>
+                    <img class="cta-icon" src="./img/icon-256.png" alt="" width="96" height="96" loading="lazy">
+                    <h2 class="section-title">Start with one emoji today.</h2>
+                    <p class="lead">It takes a few seconds. In a month, you'll have a story.</p>
+                    <a class="store-badge" href="https://apps.apple.com/app/emojily-feel-reflect-track/id6760365865" aria-label="Download Emojily on the App Store">
+                        <picture>
+                            <source media="(prefers-color-scheme: dark)" srcset="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83">
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="168" height="56" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Structured Data: SoftwareApplication -->
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a class="brand" href="./" aria-label="Emojily home">
+                <img src="./img/icon-256.png" alt="" width="36" height="36" loading="lazy">
+                Emojily
+            </a>
+            <ul class="footer-links">
+                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="./terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                <li><a href="mailto:support@Emojily.app">Contact</a></li>
+            </ul>
+            <p>&copy; 2026 Emojily. Made for iPhone.</p>
+        </div>
+    </footer>
+
+    <!-- Structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Emojily: Feel, Reflect & Track",
         "alternateName": "Emojily",
-        "description": "Track your daily mood with emojis. A gentle mood journal with a mood calendar, pattern insights, weekly summaries, and goals and streaks.",
+        "description": "The one-tap mood journal for iPhone. Log how you feel with an emoji, add tags and a note, and watch your month fill in — with a mood calendar, monthly recap stories, search, tap-to-log widgets, pattern insights, weekly summaries, and goals and streaks.",
         "applicationCategory": "HealthApplication",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS 26 or later",
         "url": "https://emojily.app/",
-        "installUrl": "https://apps.apple.com/us/app/emojily-feel-reflect-track/id6760365865",
+        "installUrl": "https://apps.apple.com/app/emojily-feel-reflect-track/id6760365865",
         "screenshot": [
-            "https://emojily.app/screenshots/01-hero.png",
-            "https://emojily.app/screenshots/02-calendar.png",
-            "https://emojily.app/screenshots/04-weekly-summary.png",
-            "https://emojily.app/screenshots/05-goals-streaks.png"
+            "https://emojily.app/img/app/today.webp",
+            "https://emojily.app/img/app/recap.webp",
+            "https://emojily.app/img/app/calendar.webp",
+            "https://emojily.app/img/app/search.webp",
+            "https://emojily.app/img/app/patterns.webp",
+            "https://emojily.app/img/app/goals.webp"
         ],
-        "image": "https://emojily.app/og-image-icon.png",
+        "image": "https://emojily.app/og-image.png",
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -467,25 +583,43 @@
             "name": "Gheorghe Cojocaru"
         },
         "inLanguage": ["en", "ca", "de", "es", "fr", "it", "nl", "pl", "pt-BR", "ro", "ru", "sv", "tr", "uk"],
-        "featureList": "Mood Calendar, Pattern Highlights, Context Tags, Daily Notes, Daily Reminders, Mood Export, Weekly Summary, Goals and Streaks, Privacy First"
+        "featureList": "One-tap mood logging, Mood calendar, Monthly recap stories, Recap video sharing, History search, Interactive Home Screen widgets, Control Center control, Siri and Shortcuts, Lock Screen and StandBy widgets, Pattern highlights, Weekly summary, Mood goals and streaks, Streak protection, App Lock, Apple Health State of Mind, Custom moods and tags, Data export, 14 languages"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Is Emojily free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Logging, the calendar, search, widgets, reminders and your latest monthly recap are all free, with no ads. Premium adds full Insights, the weekly summary, every past recap, data export and more custom moods, tags and goals."}},
+            {"@type": "Question", "name": "Do I need an account?", "acceptedAnswer": {"@type": "Answer", "text": "No. There's nothing to sign up for. Emojily keeps your journal in your own iCloud, so it's there when you move to a new iPhone."}},
+            {"@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": {"@type": "Answer", "text": "Your journal — moods, tags and notes — lives on your iPhone and in your private iCloud database. There's no Emojily server holding it. To improve the app, Emojily collects anonymous usage analytics. They never include what you write."}},
+            {"@type": "Question", "name": "Can I log without opening the app?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Tap a mood on the Home Screen widget and it's saved on the spot, or ask Siri: “Log my mood in Emojily.” The Control Center control and the Action button open straight to today's picker."}},
+            {"@type": "Question", "name": "Which iPhones does it run on?", "acceptedAnswer": {"@type": "Answer", "text": "Any iPhone with iOS 26 or later. The sentences about your week and your day need an iPhone with Apple Intelligence, set to English."}},
+            {"@type": "Question", "name": "Does it work with Apple Health?", "acceptedAnswer": {"@type": "Answer", "text": "If you'd like it to. Emojily can save each mood to Apple Health as a State of Mind. It only ever writes to Health, never reads from it, and it's off until you turn it on."}},
+            {"@type": "Question", "name": "Can I delete a day, or everything?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Delete any day from the calendar, or erase everything from Settings. Erasing removes your journal from every device signed in to your iCloud."}},
+            {"@type": "Question", "name": "Which languages does it speak?", "acceptedAnswer": {"@type": "Answer", "text": "Fourteen: English, Catalan, German, Spanish, French, Italian, Dutch, Polish, Portuguese (Brazil), Romanian, Russian, Swedish, Turkish and Ukrainian."}}
+        ]
     }
     </script>
 
     <script>
-        // Floating background emojis
-        const emojis = ['😊', '😴', '😢', '🥰', '😤', '🤔', '😎', '🥳', '😌', '🫠'];
-        const container = document.getElementById('floatingEmojis');
-
-        for (let i = 0; i < 15; i++) {
-            const el = document.createElement('span');
-            el.className = 'floating-emoji';
-            el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-            el.style.left = Math.random() * 100 + '%';
-            el.style.animationDuration = (15 + Math.random() * 20) + 's';
-            el.style.animationDelay = -(Math.random() * 30) + 's';
-            el.style.fontSize = (1.2 + Math.random() * 1.5) + 'rem';
-            container.appendChild(el);
-        }
+        // Reveal sections as they scroll in. Without the script, or with Reduce
+        // Motion on, everything is simply there.
+        (function () {
+            var root = document.documentElement;
+            if (!('IntersectionObserver' in window)) return;
+            root.classList.add('js');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+        })();
     </script>
 </body>
 </html>

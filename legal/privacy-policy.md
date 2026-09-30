@@ -15,6 +15,8 @@ The Application collects information when you download and use it. This informat
 
 The Application does not gather precise information about the location of your mobile device.
 
+**Apple Health Integration:** If you enable Health integration, the Application writes your daily mood reflections to Apple Health as State of Mind entries. This integration is entirely optional. The Application writes only to Health and never reads your Health data. Health integration requires explicit permission, which you can grant or deny during setup and can revoke at any time in the iOS Health app.
+
 The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.
 
 The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices, and marketing promotions.

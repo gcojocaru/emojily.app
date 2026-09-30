@@ -1,11 +1,11 @@
 {
-  "name": "Emojily — Daily Mood Journal & Insights",
+  "name": "Emojily — The One-Tap Mood Journal",
   "short_name": "Emojily",
-  "description": "Track your daily mood with emojis. A gentle mood journal with a mood calendar, 30-day insights, and daily reminders.",
+  "description": "The one-tap mood journal for iPhone. Log how you feel with an emoji, watch your month fill in, and get it back as a story.",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#0a0a0f",
-  "theme_color": "#0a0a0f",
+  "background_color": "#edf0f7",
+  "theme_color": "#edf0f7",
   "icons": [
     {
       "src": "./icon-192.png",

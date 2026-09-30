@@ -1,0 +1,690 @@
+curl 'http://localhost:5173/' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Cache-Control: max-age=0' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"256-J2ySDUh8Oj0oN86oCPe0Jq0Ku7Q"' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/@vite/client' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"7e60-hhXwdLFbA1HYbNY+Yg3dcemIItE"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/main.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"291-qW7o3WYdDZwqnioqeTFhaz+oesc"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/@react-refresh' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"5459-W4xlIRvs7CzM1FW1IVU0Uw0TIxA"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/vite/dist/client/env.mjs' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"27a-50Oe5S7HDq59Hm15o909pGTGmf8"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/@vite/client' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'ws://localhost:5173/?token=DmEvGfvwJ4l0' \
+  -H 'Upgrade: websocket' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Pragma: no-cache' \
+  -H 'Connection: Upgrade' \
+  -H 'Sec-WebSocket-Key: zvdlLFPUoWiFJJ0wt6PU4A==' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Sec-WebSocket-Version: 13' \
+  -H 'Sec-WebSocket-Protocol: vite-hmr' \
+  -H 'Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/main.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/main.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/src/app/App.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"241e-tdDXZzv/TFx8aw2nQFqbw9Ya2ck"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/main.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/styles/index.css' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"1eb5d-4w1HsQGlfIOTKS6FJlepinxGO6I"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/main.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-QJTFJ6OV.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-V4OQ3NZ2.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-YQ5BCTVV.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/react.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/utils/supabase/info.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"122-n26QMz0Qv3+2K+0zAknH/WyoTfY"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/LoginPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"2630-RDwl3jzXlH4nevVYjZ5Q+gc72zU"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"2b2c-wSZDd0dijUHCcz1gPSn+MiAv6/g"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ForgotPasswordPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"24b0-5KDBARbbM+C8j8P2SNXu9Lmd32I"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/DashboardPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"56f7-IAKu4GQ5jBDqL6dXNW1cdMfb95s"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/AthletesPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"586e-Rk++aPFvmOjkMj2iAR8MqbNZ/us"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/AthleteDetailPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"7484-eQSIgxul9z92PR2MTmCe8GHPL38"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/NewPlanPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"4d4a-zpVGuSdKUCEZTmz1xHdm8GA+FZA"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/NewLactateTestPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"509a-DPmPDePMjTBVcbPy65tGSYNw8f4"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/LactateTestDetailPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"44fd-4BlbuZRPYmvlpi517jCpLgoSzP0"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/SettingsPage.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"56ab-wloi/wIEAKHnzAnlLmfhMUWhBh4"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/sonner.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"aa3-Crppfjv44uYiwrM199G5rZG8PZk"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/App.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-V6VHMQ7B.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@supabase_supabase-js.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/src/app/components/ui/button.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"fe3-yIJs6Uxxd+r2/bX9avwuvpLc8+0"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/input.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"b9d-1OnakUeNprz5Ohlrit0MWNFDHbc"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/label.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"a57-cZFGM+gZw6tv2TlhSjTW0P+6/mw"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/card.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"15a6-cwWzY1mR7nbScDS/qlpRghzGj4M"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/sonner.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/SignupPage.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/src/app/components/ui/dialog.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"23be-whr1bR9prJgVfDTR7wqSTDRi2cQ"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/AthletesPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/Navigation.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"1e00-KRcQqYnlv5JIIegvIN/6f8Fn72s"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/AthletesPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/lucide-react.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/AthletesPage.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/src/app/components/ui/textarea.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"af1-ez6nEPvC+IeuN8P+u2B6wu0djFo"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/NewLactateTestPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/tabs.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"123b-IjuIA1i5A/LzGB9HhcZdS0xFP9Q"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/AthleteDetailPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/badge.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"e11-suokQzWhSJp4Rf49mF9lrDJMHNk"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/DashboardPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/src/app/components/ui/select.tsx' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"3263-COtbiNiCWwgMz3G2Z1vMJodNt4Y"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/NewPlanPage.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/next-themes.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/sonner.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/src/app/components/ui/utils.ts' \
+  -H 'Accept: */*' \
+  -H 'Accept-Language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'Connection: keep-alive' \
+  -H 'If-None-Match: W/"d7-Yz8SDfbjh2gDMKy0wUxSgFA1nH0"' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/card.tsx' \
+  -H 'Sec-Fetch-Dest: script' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-slot.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/button.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/class-variance-authority.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/button.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-HXFBIAWL.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-slot.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-NRBATONI.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-slot.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-U7P2NEEE.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/class-variance-authority.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-label.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/label.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/dialog.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-SGO4DX3H.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-label.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-PC3MSYYV.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-FZ6K4CPM.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-YK7HCQDS.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-dialog.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-tabs.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/tabs.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/chunk-UZZC2MTB.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-tabs.js?v=daf305b2' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/@radix-ui_react-select.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/select.tsx' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/clsx.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/utils.ts' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'http://localhost:5173/node_modules/.vite/deps/tailwind-merge.js?v=daf305b2' \
+  -H 'Origin: http://localhost:5173' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'Referer: http://localhost:5173/src/app/components/ui/utils.ts' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/completion_list.html?username=&colorScheme=&screenX=0&screenY=121&effectiveWindowWidth=1473.15&isDark=true' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/style.css' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/utils.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/extensionState.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/heuristicsRedefinitions.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/completion_list.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/completion_list.html?username=gc@irun.com&colorScheme=&screenX=0&screenY=121&effectiveWindowWidth=1473.15&isDark=true' \
+  -H 'Referer: http://localhost:5173/' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/style.css' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/utils.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/extensionState.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/heuristicsRedefinitions.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/completion_list.js' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/images/PasswordsExtensionIcon_128.png' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/images/safari_macos.png' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'chrome-extension://pejdijmoenmkgeppbflobdenhhabjlaj/images/PasswordsToolbar-darkmode_icon32.png' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  -H 'Referer;' ;
+curl 'https://saetejwfjjtknvfrwbqc.supabase.co/functions/v1/server/signup' \
+  -H 'accept: */*' \
+  -H 'accept-language: en,ru;q=0.9,ro;q=0.8' \
+  -H 'apikey: sb_publishable_E4CLYFaJxkTYYSjOY_LCgw_1Nqw3WCO' \
+  -H 'authorization: Bearer sb_publishable_E4CLYFaJxkTYYSjOY_LCgw_1Nqw3WCO' \
+  -H 'content-type: application/json' \
+  -H 'origin: http://localhost:5173' \
+  -H 'priority: u=1, i' \
+  -H 'referer: http://localhost:5173/' \
+  -H 'sec-ch-ua: "Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36' \
+  --data-raw '{"email":"gc@irun.com","password":"123123","name":"Gheorghe Cojocaru"}'
